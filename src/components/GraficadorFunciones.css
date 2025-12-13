@@ -1,0 +1,589 @@
+/* Estilos principales */
+.graficador-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Contenido principal */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  padding: 2rem;
+  flex: 1;
+}
+
+@media (max-width: 1200px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e8ed;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h2, .card h3 {
+  color: #2c3e50;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #f0f3f5;
+  font-weight: 600;
+}
+
+/* Panel de configuración */
+.panel-configuracion {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+.info-icon {
+  cursor: help;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.input-with-button {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.funcion-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 2px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Consolas', 'Monaco', monospace;
+  transition: all 0.3s;
+  background: #f8fafc;
+}
+
+.funcion-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  background: white;
+}
+
+.btn-clear {
+  padding: 0.8rem 1.2rem;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn-clear:hover {
+  background: #c0392b;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-top: 0.5rem;
+  font-style: italic;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  border-left: 3px solid #3498db;
+}
+
+/* Rangos */
+.rangos-config {
+  margin-bottom: 1.5rem;
+}
+
+.rangos-inputs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.rango-item {
+  flex: 1;
+}
+
+.rango-item label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+  font-weight: 500;
+}
+
+.rango-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.rango-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.flecha-rango {
+  font-size: 1.5rem;
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Botones */
+.acciones {
+  display: flex;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  flex: 1;
+  min-width: 140px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #1f639e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary {
+  background: #95a5a6;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  color: white;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #27ae60 0%, #219653 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
+
+/* Funciones predefinidas */
+.funciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.funcion-btn {
+  padding: 0.8rem 0.5rem;
+  background: #ecf0f1;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  text-align: center;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.funcion-btn:hover {
+  background: #d5dbdb;
+  border-color: #3498db;
+  transform: translateY(-1px);
+}
+
+.funcion-btn.active {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border-color: #2980b9;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Historial */
+.historial {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+
+.historial-item {
+  padding: 0.8rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #3498db;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.historial-item:hover {
+  background: #e3f2fd;
+  transform: translateX(5px);
+}
+
+.historial-funcion {
+  font-family: 'Consolas', monospace;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.historial-info {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Ayuda */
+.btn-toggle-ayuda {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  color: #3498db;
+  padding: 0 0.5rem;
+}
+
+.ayuda-contenido {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e1e8ed;
+}
+
+.ayuda-contenido ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.ayuda-contenido li {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.ayuda-contenido code {
+  background: #e8f4fc;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Consolas', monospace;
+  color: #2980b9;
+}
+
+/* Panel del gráfico */
+.panel-grafico {
+  display: flex;
+  flex-direction: column;
+}
+
+.grafico-card {
+  height: fit-content;
+}
+
+.grafico-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.estado-grafico {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.estado-ok {
+  background: #d5f4e6;
+  color: #27ae60;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.estado-error {
+  background: #fde8e8;
+  color: #e74c3c;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.estado-cargando {
+  background: #fff3cd;
+  color: #856404;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Errores */
+.error-alert {
+  background: #fde8e8;
+  border-left: 4px solid #e74c3c;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  color: #c0392b;
+}
+
+.sugerencias-error {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #f5b7b1;
+}
+
+.sugerencias-error p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.sugerencias-error ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.sugerencias-error li {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Canvas */
+.canvas-container {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #dfe6e9;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.grafico-canvas {
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer del gráfico */
+.grafico-footer {
+  margin-top: 1.5rem;
+}
+
+.estadisticas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.estadistica {
+  background: #f8f9fa;
+  padding: 0.8rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 3px solid #3498db;
+}
+
+.estadistica .label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.estadistica .valor {
+  font-family: 'Consolas', monospace;
+  color: #3498db;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.funcion-actual {
+  background: #e3f2fd;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px dashed #3498db;
+  text-align: center;
+}
+
+.funcion-actual code {
+  font-family: 'Consolas', monospace;
+  color: #2c3e50;
+  background: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 2rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content p {
+  margin-bottom: 0.5rem;
+}
+
+.disclaimer {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 1rem;
+  color: #ecf0f1;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .main-content {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .rangos-inputs {
+    flex-direction: column;
+  }
+  
+  .flecha-rango {
+    transform: rotate(90deg);
+  }
+  
+  .acciones {
+    flex-direction: column;
+  }
+  
+  .btn {
+    min-width: 100%;
+  }
+  
+  .funciones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .estadisticas {
+    grid-template-columns: 1fr;
+  }
+  
+  .canvas-container {
+    padding: 0.5rem;
+  }
+  
+  .grafico-canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+}
